@@ -2848,8 +2848,52 @@ a {
     height:10px;
 
 }
+.button {
+  background-color: #436150; /* Green */
+  border: none;
+  color: white;
+  padding: 4px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 3px 2px;
+  cursor: pointer;
+}
 
+.button2 {background-color: #70996B;}
+.button3 {background-color: #94C657;}
+.button4 {background-color: #93BF8A; }
+.button5 {background-color: #b1CA91;}
 
+.button:hover {
+  color: #f86808;
+}
+
+.modal-content custom-div{
+  width:200px;
+  margin:0 auto;
+}
+
+.input-icons i {
+            position: absolute;
+        }
+
+        .input-icons {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            padding: 10px;
+            min-width: 40px;
+        }
+
+.input-field {
+            width: 50%;
+            padding: 5px;
+            text-align: center;
+            }
 
 
 

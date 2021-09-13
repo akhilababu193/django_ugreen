@@ -31,7 +31,7 @@
 <!-- pageWrapper -->
 <div id="pageWrapper">
     <!-- header -->
-    <header id="header" class="fixed-top" style="height:120px; width:100%; background-color:white;">
+    <header id="header" class="position-fixed" style="height: 120px; background-color: whitesmoke;">
         <!-- headerHolderCol -->
         <!--			<div class="headerHolderCol pt-lg-4 pb-lg-5 py-3">-->
         <!--				<div class="container">-->
@@ -75,8 +75,8 @@
                 <div class="col-6 col-sm-2">
                     <!-- mainLogo -->
                     <div class="logo">
-                        <a href="{% url 'home' %}"><span><img src="{% static 'images/logo.png' %}" width="90px"
-                                                              height="90px" alt="Botanical"
+                        <a href="{% url 'home' %}"><span><img src="{% static 'images/logo.png' %}" width="222px"
+                                                              height="222px" alt="Botanical"
                                                               class="img-fluid"></span></a>
                     </div>
                 </div>
@@ -96,28 +96,7 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav mx-auto text-uppercase d-inline-block">
-                                    <!--										<li class="nav-item active dropdown">-->
-                                    <!--											<a class="dropdown-toggle d-block" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">home</a>-->
-                                    <!--											<ul class="list-unstyled text-capitalize dropdown-menu mt-0 py-0">&ndash;&gt;-->
-                                    <!--												<li class="d-block mx-0"><a href="home.html">Home 1</a></li>&ndash;&gt;-->
-                                    <!--												<li class="d-block mx-0"><a href="home2.html">Home 2</a></li>&ndash;&gt;-->
-                                    <!--												<li class="d-block mx-0"><a href="home3.html">Home 3</a></li>&ndash;&gt;-->
-                                    <!--											</ul>-->
-                                    <!--										</li>-->
-                                    <!--										<li class="nav-item dropdown">-->
-                                    <!--											<a class="dropdown-toggle d-block" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Store</a>-->
-                                    <!--											<ul class="list-unstyled text-capitalize dropdown-menu mt-0 py-0">-->
-                                    <!--												<li class="d-block mx-0"><a href="{% url 'shop' %}">Shop Left Sidebar</a></li>-->
-                                    <!--												<li class="d-block mx-0"><a href="{% url 'shop-detail' %}">Single Product</a></li>-->
-                                    <!--											</ul>-->
-                                    <!--										</li>-->
 
-                                    <!--										<li class="nav-item">-->
-                                    <!--											<a class="d-block" href="{% url 'shop' %}">Store</a>-->
-                                    <!--										</li>-->
-                                    <!--										<li class="nav-item">-->
-                                    <!--											<a class="d-block" href="{% url 'about-us' %}">About</a>-->
-                                    <!--										</li>-->
                                     <li class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
                                         class="nav-item">
                                         <a class="d-block" href="{% url 'home' %}">Home</a>
@@ -127,103 +106,79 @@
                                         <a class="d-block" href="{% url 'blog' %}">Blog</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="d-block" href="{% url 'home' %}#gallery">Gallery</a>
+                                        <a class="d-block" href="#" data-toggle="modal" data-target="#user-login">Sign in</a>
                                     </li>
-                                    <!--										<li class="nav-item dropdown">-->
-                                    <!--											<a class="dropdown-toggle d-block" role="button" data-toggle="dropdown" aria-haspopup="true" href="{% url 'blog' %}" aria-expanded="false">Blog</a>-->
-                                    <!--											<ul class="list-unstyled text-capitalize dropdown-menu mt-0 py-0">-->
-
-                                    <!--											</ul>-->
-                                    <!--										</li>-->
-                                    <!--										<li class="nav-item dropdown">-->
-                                    <!--											<a class="dropdown-toggle d-block" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>-->
-                                    <!--											<ul class="list-unstyled text-capitalize dropdown-menu mt-0 py-0">-->
-                                    <!--												<li class="d-block mx-0"><a href="{% url 'cart-page' %}">Cart Page</a></li>-->
-                                    <!--											</ul>-->
-                                    <!--										</li>-->
                                     <li class="{% if request.resolver_match.url_name == 'about-us' %}active{% endif %}"
                                         class="nav-item">
                                         <a class="d-block" href="{% url 'about-us' %}">About us</a>
                                     </li>
+                                    <li class="nav-item ml-0"><a class="nav-link icon-search" href="javascript:void(0);"></a></li>
                                 </ul>
                             </div>
-                        </nav>
+                        </nav><br>
                     </div>
-
-                    <div class="row justify-content-center" style="padding:10px;">
-                        <ul class="list-unstyled followSocailNetwork d-flex flex-nowrap" >
-                            <!--								<li class="fwEbold mr-xl-11 mr-md-8 mr-3">Follow  us:</li>-->
-                            <li class="mr-xl-4 mr-md-5 mr-2"><a href="{% url 'potting_soil' %}"><img
-                                    src="{% static 'cat_icon/potting.png' %}" width="90px" height="25px"
-                                    data-toggle="tooltip" data-placement="bottom" title="Potting soil"></a></li>
-                            <li class="mr-xl-4 mr-md-5 mr-2"><a href="{% url 'plant_health' %}"><img
-                                    src="{% static 'cat_icon/plant.png' %}" width="90px" height="25px"
-                                    data-toggle="tooltip" data-placement="bottom" title="Plant Health"></a></li>
-                            <li class="mr-xl-4 mr-md-5 mr-2"><a href="{% url 'seeds' %}"><img
-                                    src="{% static 'cat_icon/seeds.png' %}" width="90px" height="25px"
-                                    data-toggle="tooltip" data-placement="bottom" title="Seeds"></a></li>
-                            <li class="mr-xl-4 mr-md-5 mr-2"><a href="{% url 'accessories' %}"><img
-                                    src="{% static 'cat_icon/accessories.png' %}" width="90px" height="25px"
-                                    data-toggle="tooltip" data-placement="bottom" title="Accessories"></a></li>
-                            <li class="mr-2"><a href="{% url 'services' %}"><img
-                                    src="{% static 'cat_icon/services.png' %}" width="90px" height="25px"
-                                    data-toggle="tooltip" data-placement="bottom" title="Services"></a></li>
-                        </ul>
-                    </div>
-
-
-                </div>
-                <div class="col-sm-3 col-lg-2">
-						<!-- wishListII -->
-						<ul class="nav nav-tabs wishListII pt-5 justify-content-end border-bottom-0">
-							<li class="nav-item ml-0"><a class="nav-link icon-search" href="javascript:void(0);"></a></li>
-							<li class="nav-item"><a class="nav-link position-relative icon-cart" href="{% url 'cart-page' %}";><span class="num rounded d-block">2</span></a></li>
-							<li class="nav-item">
-<!--                                <a class="nav-link icon-profile" href="#user-login"></a>-->
-                            <a href="#" class="nav-link icon-profile" data-toggle="modal" data-target="#user-login"></a></li>
-						</ul>
-					</div>
-                </div>
-            </div>
+                        <div class="row justify-content-center">
+			<nav class="navbar navbar-expand-lg navbar-light p-0 pageNav2 position-static">
+								<!-- <button type="button" class="navbar-toggle collapsed position-relative" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>-->
+								<div class="collapse navbar-collapse" id="navbarNav">
+					<button class="button" onclick="window.location.href='{% url 'potting_soil' %}'">Potting soil</button>
+					<button class="button button2" onclick="window.location.href='{% url 'plant_health' %}'">Plant health</button>
+					<button class="button button3" onclick="window.location.href='{% url 'seeds' %}'">Seeds</button>
+					<button class="button button4" onclick="window.location.href='{% url 'accessories' %}'">Accessories</button>
+					<button class="button button5" onclick="window.location.href='{% url 'services' %}'">Services</button>
+				</div>
+            </nav>
+        </div>
+      </div>
+ </div>
     </header>
 
-    <br><br><br><br><br>
-
-    </div>
-
+                </div>
+    <br><br><br><br>
 
     <div class="modal fade" id="user-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
          aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-centered " role="document">
-            <div class="modal-content custom-div">
+            <div class="modal-content custom-div" >
                 <div class="modal-header">
                     <h5 class="modal-title d-block w-100" id="exampleModalLabel1">Login</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <div class="logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+                          <a href="{% url 'home' %}"><span><img src="{% static 'images/logo.png' %}" width="100px"
+                                                              height="100px" alt="logo"
+                                                              class="img-fluid"></span></a>
+                    </div>
                 <div class="modal-body  mt-4">
                     <form action="" method="post">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="contact-form">
-                                    <label> Username:</label>
-                                    <input id="form-name" type="text" name="name" placeholder="Username *"
+                                <div class="input-icons">
+                                    <i class="fa fa-user icon"></i>
+                                    <input class="input-field" id="form-name" type="text" name="name" placeholder="Username *"
                                            required>
                                 </div>
                             </div>
                             <br>
                             <div class="col-md-12">
-                                <div class="contact-form">
-                                    <label> Password: </label>
-                                    <input id="form-password" type="password" name="password"
+                                <div class="input-icons">
+                                    <i class="fa fa-key icon"></i>
+                                    <input class="input-field" id="form-password" type="password" name="password"
                                            placeholder="Password *" required>
                                 </div>
                             </div>
 
                         </div>
-
-                        <button type="submit" class="enquire-btn mt-md-3 mb-4">Submit</button>
+<!--                        <a href="#" class="btn btnTheme btnShop fwEbold text-white md-round py-3 px-4">Log in </a>-->
+                        <button type="submit" class="enquire-btn mt-md-3 mb-4" style="border-radius: 10px; background-color: #5ba515; color:white;" >Log-in</button>
                     </form>
                     <h6>New user? Please <a href="#"  data-toggle="modal" data-target="#user-register">Register</a></h6>
                 </div>
