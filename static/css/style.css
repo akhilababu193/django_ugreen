@@ -2852,14 +2852,14 @@ a {
   background-color: #436150; /* Green */
   border: none;
   color: white;
-  padding: 4px 30px;
+  padding: 3px 30px;
   text-align: center;
   text-decoration: none;
-  display: block;
-  font-size: 16px;
+  display: inline-block;
+  font-size: 14px;
   margin: 3px 2px;
   cursor: pointer;
-}
+  }
 
 .button2 {background-color: #70996B;}
 .button3 {background-color: #94C657;}
@@ -2867,7 +2867,8 @@ a {
 .button5 {background-color: #b1CA91;}
 
 .button:hover {
-  color: #f86808;
+
+  background-color:#f86808;
 }
 
 .modal-content custom-div{

@@ -2,11 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from .models import ug_new_arrivals
-
+from .models import ug_best_seller
 
 def homepage(request):
     new_prods = ug_new_arrivals.objects.all()
-    return render(request, 'home2.html', {'ug_new_arrivals': new_prods})
+    best_seller = ug_best_seller.objects.all()
+    return render(request, 'home2.html',({'ug_new_arrivals': new_prods, 'ug_best_seller': best_seller}))
 
 
 def blog(request):

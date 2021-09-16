@@ -31,7 +31,7 @@
 <!-- pageWrapper -->
 <div id="pageWrapper">
     <!-- header -->
-    <header id="header" class="position-fixed" style="height: 120px; background-color: whitesmoke;">
+    <header id="header" class="position-fixed" style="height: 140px; background-color: white;">
         <!-- headerHolderCol -->
         <!--			<div class="headerHolderCol pt-lg-4 pb-lg-5 py-3">-->
         <!--				<div class="container">-->
@@ -75,8 +75,8 @@
                 <div class="col-6 col-sm-2">
                     <!-- mainLogo -->
                     <div class="logo">
-                        <a href="{% url 'home' %}"><span><img src="{% static 'images/logo.png' %}" width="222px"
-                                                              height="222px" alt="Botanical"
+                        <a href="{% url 'home' %}"><span><img src="{% static 'images/logo.png' %}" width="200px"
+                                                              height="200px" alt="Botanical"
                                                               class="img-fluid"></span></a>
                     </div>
                 </div>
@@ -85,8 +85,7 @@
                     <!-- mainHolder -->
                     <div class="mainHolder pt-lg-5 pt-3 justify-content-center">
                         <!-- pageNav2 -->
-                        <nav class="navbar navbar-expand-lg navbar-light p-0 pageNav2 position-static"
-                             style="padding:15px;">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0 pageNav2 position-static">
                             <button type="button" class="navbar-toggle collapsed position-relative"
                                     data-toggle="collapse" data-target="#navbarNav" aria-expanded="false">
                                 <span class="sr-only">Toggle navigation</span>
@@ -116,6 +115,15 @@
                                 </ul>
                             </div>
                         </nav><br>
+                        <!-- div class="col-sm-3 col-lg-2">
+						<!-- wishListII
+						<ul class="nav nav-tabs wishListII pt-5 justify-content-end border-bottom-0">
+							<li class="nav-item ml-0"><a class="nav-link icon-search" href="javascript:void(0);"></a></li>
+							<li class="nav-item"><a class="nav-link position-relative icon-cart" href="javascript:void(0);"><span class="num rounded d-block">2</span></a></li>
+							<li class="nav-item"><a class="nav-link icon-profile" href="javascript:void(0);"></a></li>
+						</ul>
+					</div>-->
+
                     </div>
                         <div class="row justify-content-center">
 			<nav class="navbar navbar-expand-lg navbar-light p-0 pageNav2 position-static">
@@ -126,19 +134,19 @@
 									<span class="icon-bar"></span>
 								</button>-->
 								<div class="collapse navbar-collapse" id="navbarNav">
-					<button class="button" onclick="window.location.href='{% url 'potting_soil' %}'">Potting soil</button>
-					<button class="button button2" onclick="window.location.href='{% url 'plant_health' %}'">Plant health</button>
-					<button class="button button3" onclick="window.location.href='{% url 'seeds' %}'">Seeds</button>
-					<button class="button button4" onclick="window.location.href='{% url 'accessories' %}'">Accessories</button>
-					<button class="button button5" onclick="window.location.href='{% url 'services' %}'">Services</button>
+					<button class="button" onclick="window.location.href='{% url 'potting_soil' %}'"><img src="{% static 'cat_icon/potting_soil.png' %}" width="20px" height="20px" style="margin-right:10px;">Potting soil</button>
+					<button class="button button2" onclick="window.location.href='{% url 'plant_health' %}'"><img src="{% static 'cat_icon/planthealth.png' %}" width="20px" height="20px" style="margin-right:10px;">Plant health</button>
+					<button class="button button3" onclick="window.location.href='{% url 'seeds' %}'"><img src="{% static 'cat_icon/seed1.png' %}" width="20px" height="20px" style="margin-right:10px;">Seeds</button>
+					<button class="button button4" onclick="window.location.href='{% url 'accessories' %}'"><img src="{% static 'cat_icon/accessories.png' %}" width="20px" height="20px" style="margin-right:10px;">Accessories</button>
+					<button class="button button5" onclick="window.location.href='{% url 'services' %}'"><img src="{% static 'cat_icon/services.png' %}" width="20px" height="20px" style="margin-right:10px;">Services</button>
 				</div>
             </nav>
         </div>
       </div>
- </div>
+            </div>
     </header>
 
-                </div>
+
     <br><br><br><br>
 
     <div class="modal fade" id="user-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
@@ -297,10 +305,11 @@
                 <div class="col-12 col-sm-6 col-lg-3 pl-xl-14 mb-lg-0 mb-4">
                     <h3 class="headingVI fwEbold text-uppercase mb-6">Information</h3>
                     <ul class="list-unstyled footerNavList">
+                        <li class="mb-1"><a href="{% url 'home' %}#new_arrival">Working Days & Hours: Mon - Sat 9:00AM - 6:00PM</a></li>
                         <li class="mb-1"><a href="{% url 'home' %}#new_arrival">New Products</a></li>
                         <li class="mb-2"><a href="{% url 'home' %}#best_seller">Top Sellers</a></li>
                         <li class="mb-2"><a href="{% url 'contact-us' %}">Contact-us</a></li>
-                        <li class="mb-2"><a href="{% url 'about-us' %}">About Our Shop</a></li>
+<!--                        <li class="mb-2"><a href="{% url 'about-us' %}">About Our Shop</a></li>-->
                         <li><a href="javascript:void(0);">Privacy policy</a></li>
                     </ul>
                 </div>
@@ -308,7 +317,8 @@
                     <h3 class="headingVI fwEbold text-uppercase mb-7">My Account</h3>
                     <ul class="list-unstyled footerNavList">
                         <li class="mb-1"><a href="/user/login">My account</a></li>
-                        <li class="mb-2"><a href="javascript:void(0);">Discount</a></li>
+                        <li class="mb-2"><a href="javascript:void(0);">Personal Information</a></li>
+                        <li class="mb-2"><a href="javascript:void(0);">Order History</a></li>
                         <li class="mb-2"><a href="javascript:void(0);">FAQ's</a></li>
                         <!--								<li><a href="javascript:void(0);">Personal information</a></li>-->
                     </ul>
