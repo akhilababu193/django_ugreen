@@ -64,6 +64,7 @@ Theme URI: http://www.htmlbeans.com/html/botanical/
 46	 contactForm
 
 ---------------------------------------------------------*/
+
 html {
   background-color: #343a40;
 }
@@ -2515,6 +2516,7 @@ a {
   background: #fff;
 }
 
+
 .pageNav2 {
   font-size: 14px;
   line-height: 0.875;
@@ -2849,26 +2851,33 @@ a {
 
 }
 .button {
-  background-color: #436150; /* Green */
+  /* background-color: #436150; /* Green */
   border: none;
   color: white;
-  padding: 3px 30px;
+ /* padding: 3px 30px;*/
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  margin: 3px 2px;
+  height:35px;
+  /* margin: 3px 2px; */
   cursor: pointer;
+  background: none;
+  margin-bottom: 10px;
   }
 
-.button2 {background-color: #70996B;}
+/* .button2 {background-color: #70996B;}
 .button3 {background-color: #94C657;}
 .button4 {background-color: #93BF8A; }
 .button5 {background-color: #b1CA91;}
 
-.button:hover {
+/* .button:hover {
 
   background-color:#f86808;
+} */
+
+button:focus {
+  outline:0;
 }
 
 .modal-content custom-div{
@@ -2891,11 +2900,10 @@ a {
         }
 
 .input-field {
-            width: 50%;
-            padding: 5px;
+            width: 100%;
+            padding: 5px 10px;
             text-align: center;
             }
-
 
 
 

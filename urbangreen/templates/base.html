@@ -76,7 +76,7 @@
                     <!-- mainLogo -->
                     <div class="logo">
                         <a href="{% url 'home' %}"><span><img src="{% static 'images/logo.png' %}" width="200px"
-                                                              height="200px" alt="Botanical"
+                                                              height="150px" alt="Botanical"
                                                               class="img-fluid"></span></a>
                     </div>
                 </div>
@@ -116,8 +116,8 @@
                             </div>
                         </nav><br>
                         <!-- div class="col-sm-3 col-lg-2">
-						<!-- wishListII
-						<ul class="nav nav-tabs wishListII pt-5 justify-content-end border-bottom-0">
+						 wishListII-->
+						<!--<ul class="nav nav-tabs wishListII pt-5 justify-content-end border-bottom-0">
 							<li class="nav-item ml-0"><a class="nav-link icon-search" href="javascript:void(0);"></a></li>
 							<li class="nav-item"><a class="nav-link position-relative icon-cart" href="javascript:void(0);"><span class="num rounded d-block">2</span></a></li>
 							<li class="nav-item"><a class="nav-link icon-profile" href="javascript:void(0);"></a></li>
@@ -126,53 +126,64 @@
 
                     </div>
                         <div class="row justify-content-center">
-			<nav class="navbar navbar-expand-lg navbar-light p-0 pageNav2 position-static">
+			<nav class="navbar navbar-expand-lg navbar-light p-0 pageNav2 position-static" >
 								<!-- <button type="button" class="navbar-toggle collapsed position-relative" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false">
 									<span class="sr-only">Toggle navigation</span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>-->
-								<div class="collapse navbar-collapse" id="navbarNav">
-					<button class="button" onclick="window.location.href='{% url 'potting_soil' %}'"><img src="{% static 'cat_icon/potting_soil.png' %}" width="20px" height="20px" style="margin-right:10px;">Potting soil</button>
-					<button class="button button2" onclick="window.location.href='{% url 'plant_health' %}'"><img src="{% static 'cat_icon/planthealth.png' %}" width="20px" height="20px" style="margin-right:10px;">Plant health</button>
-					<button class="button button3" onclick="window.location.href='{% url 'seeds' %}'"><img src="{% static 'cat_icon/seed1.png' %}" width="20px" height="20px" style="margin-right:10px;">Seeds</button>
-					<button class="button button4" onclick="window.location.href='{% url 'accessories' %}'"><img src="{% static 'cat_icon/accessories.png' %}" width="20px" height="20px" style="margin-right:10px;">Accessories</button>
-					<button class="button button5" onclick="window.location.href='{% url 'services' %}'"><img src="{% static 'cat_icon/services.png' %}" width="20px" height="20px" style="margin-right:10px;">Services</button>
-				</div>
+								<div class="collapse navbar-collapse text-center" id="navbarNav">
+<!--					<button class="button" onclick="window.location.href='{% url 'potting_soil' %}'"><img src="{% static 'cat_icon/potting_soil.png' %}" width="20px" height="20px" style="margin-right:10px;">Potting soil</button>-->
+<!--					<button class="button button2" onclick="window.location.href='{% url 'plant_health' %}'"><img src="{% static 'cat_icon/planthealth.png' %}" width="20px" height="20px" style="margin-right:10px;">Plant health</button>-->
+<!--					<button class="button button3" onclick="window.location.href='{% url 'seeds' %}'"><img src="{% static 'cat_icon/seed1.png' %}" width="20px" height="20px" style="margin-right:10px;">Seeds</button>-->
+<!--					<button class="button button4" onclick="window.location.href='{% url 'accessories' %}'"><img src="{% static 'cat_icon/accessories.png' %}" width="20px" height="20px" style="margin-right:10px;">Accessories</button>-->
+<!--					<button class="button button5" onclick="window.location.href='{% url 'services' %}'"><img src="{% static 'cat_icon/services.png' %}" width="20px" height="20px" style="margin-right:10px;">Services</button>-->
+				<button class="button" onclick="window.location.href='{% url 'potting_soil' %}'">
+                    <img src="{% static 'web_icons/potting1.png' %}" height="35px" onMouseOver="this.src='{% static 'web_icons/potting2.png' %}'" onMouseOut="this.src='{% static 'web_icons/potting1.png' %}' " > </button>
+				<button class="button" onclick="window.location.href='{% url 'plant_health' %}'">
+                    <img src="{% static 'web_icons/planthealth1.png' %}" height="35px" onMouseOver="this.src='{% static 'web_icons/planthealth2.png' %}' " onMouseOut="this.src='{% static 'web_icons/planthealth1.png'%}' "> </button>
+				<button class="button" onclick="window.location.href='{% url 'seeds' %}'">
+                    <img src="{% static 'web_icons/seeds1.png' %}" height="35px" onMouseOver="this.src='{% static 'web_icons/seeds2.png' %}' " onMouseOut="this.src='{% static 'web_icons/seeds1.png'%}' "> </button>
+				<button class="button" onclick="window.location.href='{% url 'accessories' %}'">
+                    <img src="{% static 'web_icons/accessories1.png' %}" height="35px" onMouseOver="this.src='{% static 'web_icons/accessories2.png' %}' " onMouseOut="this.src='{% static 'web_icons/accessories1.png' %}' ">  </button>
+				<button class="button" onclick="window.location.href='{% url 'services' %}'">
+                    <img src="{% static 'web_icons/services1.png' %}" height="35px" onMouseOver="this.src='{% static 'web_icons/services2.png' %}' " onMouseOut="this.src='{% static 'web_icons/services1.png' %}' "> </button>
+
+               </div>
             </nav>
         </div>
       </div>
             </div>
-    </header>
+        </div></header>
 
 
-    <br><br><br><br>
+    <br><br><br><br><br>
 
     <div class="modal fade" id="user-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
          aria-hidden="true">
 
-        <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-dialog modal-dialog-centered " role="document" style="width: 360px; height: 450px;">
             <div class="modal-content custom-div" >
-                <div class="modal-header">
-                    <h5 class="modal-title d-block w-100" id="exampleModalLabel1">Login</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="modal-header" style="background-color:#5ba515; color:white; ">
+                    <h5 class="modal-title" id="exampleModalLabel1">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white;">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                 </div>
-                <div class="logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+                <div class="logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%; text-align :center;">
                           <a href="{% url 'home' %}"><span><img src="{% static 'images/logo.png' %}" width="100px"
                                                               height="100px" alt="logo"
                                                               class="img-fluid"></span></a>
                     </div>
-                <div class="modal-body  mt-4">
+                <div class="modal-body  mt-4 text-center">
                     <form action="" method="post">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="input-icons">
                                     <i class="fa fa-user icon"></i>
-                                    <input class="input-field" id="form-name" type="text" name="name" placeholder="Username *"
-                                           required>
+                                    <input class="input-field" id="form-name" width="100%" type="text" name="name" placeholder="Username *"
+                                           required >
                                 </div>
                             </div>
                             <br>
@@ -183,81 +194,85 @@
                                            placeholder="Password *" required>
                                 </div>
                             </div>
-
                         </div>
 <!--                        <a href="#" class="btn btnTheme btnShop fwEbold text-white md-round py-3 px-4">Log in </a>-->
-                        <button type="submit" class="enquire-btn mt-md-3 mb-4" style="border-radius: 10px; background-color: #5ba515; color:white;" >Log-in</button>
-                    </form>
-                    <h6>New user? Please <a href="#"  data-toggle="modal" data-target="#user-register">Register</a></h6>
+                        <button type="submit" class="button"  style="background-color: #5ba515; color:white; margin: auto; text-height:20px; padding-left:10px; padding-right:10px; " >Log-in</button>
+                    </form><br>
+                    <p>New user? Please <a href=" "  data-toggle="modal" data-target="#user-register">Register Now</a></p>
                 </div>
             </div>
         </div>
     </div>
 
-        <div class="modal fade" id="user-register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="user-register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
          aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered " role="document">
-            <div class="modal-content custom-div">
-                <div class="modal-header">
-                    <h5 class="modal-title d-block w-100" id="exampleModalLabel">Register</h5>
 
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+        <div class="modal-dialog modal-dialog-centered " role="document" style="width: 450px; height: 450px;">
+            <div class="modal-content custom-div" >
+                <div class="modal-header" style="background-color:#5ba515; color:white; ">
+                    <h5 class="modal-title" id="exampleModalLabel1">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white;">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                 </div>
-
-                <div class="modal-body  mt-4">
+                <p style="text-align:center; padding-top:10px; color:black;">Welcome to Urban green, <br> are you ready to join the elite?</p>
+<!--                <div class="logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%; text-align :center;">-->
+<!--                          <a href="{% url 'home' %}"><span><img src="{% static 'images/logo.png' %}" width="100px"-->
+<!--                                                              height="100px" alt="logo"-->
+<!--                                                              class="img-fluid"></span></a>-->
+<!--                    </div>-->
+                <div class="modal-body  mt-4 text-center">
                     <form action="" method="post">
                         <div class="row">
-                                <div><h6>Welcome to Urban green</h6></div>
-                                <div><p>Are you ready to join the elite?</p></div>
-                            </div>
                             <div class="col-md-12">
-                                <div class="contact-form">
-                                    <label> Username:</label>
-                                    <input id="form_name" type="text" name="name" placeholder="Username *"
-                                           required>
+                                <div class="input-icons">
+
+                                    <input class="input-field" id="form-name" width="100%" type="text" name="name" placeholder="Username *"
+                                           required >
+                                </div>
+                            </div>
+                            <br>
+                             <div class="col-md-12">
+                                <div class="input-icons">
+
+                                    <input class="input-field" id="form-email" type="text" name="email"
+                                           placeholder="Email *" required>
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <div class="contact-form">
-                                    <label> Email:</label>
-                                    <input id="form_email" type="text" name="email" placeholder="Email *"
-                                           required>
+                                <div class="input-icons">
+
+                                    <input class="input-field" id="form-firstname" type="text" name="firstname"
+                                           placeholder="First Name *" required>
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <div class="contact-form">
-                                    <label> First Name:</label>
-                                    <input id="form_fname" type="text" name="fname" placeholder="Firstname *"
-                                           required>
+                                <div class="input-icons">
+
+                                    <input class="input-field" id="form-lastname" type="text" name="lastname"
+                                           placeholder="Last Name *" required>
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <div class="contact-form">
-                                    <label> Lastname:</label>
-                                    <input id="form_lname" type="text" name="lname" placeholder="Lastname *"
-                                           required>
+                                <div class="input-icons">
+
+                                    <input class="input-field" id="form-phone" type="text" name="phone-number"
+                                           placeholder="Phone Number *" required>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="contact-form">
-                                    <label> Password: </label>
-                                    <input id="form_password" type="password" name="password"
+                             <div class="col-md-12">
+                                <div class="input-icons">
+
+                                    <input class="input-field" id="form-apssword" type="text" name="password"
                                            placeholder="Password *" required>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="contact-form">
-                                    <label> Confirm Password: </label>
-                                    <input id="form_cpassword" type="cpassword" name="password"
-                                           placeholder="Password *" required>
-                                </div>
-                            </div>
-                        <button type="submit" class="enquire-btn mt-md-3 mb-4">Submit</button>
-                            </form>
+
                         </div>
-                    <h6>Already an user? Please <a href="#user-login">Login</a></h6>
+<!--                        <a href="#" class="btn btnTheme btnShop fwEbold text-white md-round py-3 px-4">Log in </a>-->
+                        <button type="submit" class="button"  style="background-color: #5ba515; color:white; margin: auto; text-height:20px; padding-left:10px; padding-right:10px; " >Sign-in</button>
+                    </form><br>
+                    <p>Already an user? <a href="#"  data-toggle="modal" data-target="#user-login">Log-in</a></p>
                 </div>
             </div>
         </div>
@@ -267,7 +282,7 @@
     {% block content %}
     {% endblock %}
     <!-- footerHolder -->
-    <aside class="footerHolder overflow-hidden bg-lightGray pt-xl-23 pb-xl-8 pt-lg-10 pb-lg-8 pt-md-12 pb-md-8 pt-10">
+    <aside class="footerHolder overflow-hidden bg-lightGray pt-xl-23 pb-xl-8 pt-lg-10 pb-lg-8 pt-md-12 pb-md-8 pt-10" >
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-6 col-lg-4 mb-lg-0 mb-4">

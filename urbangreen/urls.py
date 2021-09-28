@@ -20,6 +20,7 @@ urlpatterns = [
     path('seeds.html', views.seeds, name='seeds'),
     path('accessories.html', views.accessories, name='accessories'),
     path('services.html', views.services, name='services'),
+    path('register.html', views.user_register, name='user_register'),
     # path('', views.home, name='home'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
