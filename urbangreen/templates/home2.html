@@ -57,7 +57,7 @@
 						<div class="contactListColumn border bg-lightGray overflow-hidden py-xl-5 py-md-3 py-2 px-xl-6 px-md-3 px-3 d-flex">
 							<span class="icon icon-van"></span>
 							<div class="alignLeft pl-2">
-								<strong class="headingV fwEbold d-block mb-1">Free shipping order</strong>
+								<strong class="headingV fwEbold d-block mb-1" style="padding-right:10px">Free shipping order</strong>
 								<p class="m-0">On orders over  &#8377 100</p>
 							</div>
 						</div>
@@ -414,49 +414,30 @@
 					</header>
 				</div>
 				<div class="row">
+					{% static 'images' as baseURL %}
+							{% for blog in ug_blogs %}
 					<div class="col-12 col-sm-6 col-lg-4">
+
 						<!-- newsPostColumn -->
 						<div class="newsPostColumn text-center px-2 pb-6 mb-6">
+
 							<div class="imgHolder position-relative mb-6">
 								<a href="blog-detail.html">
-									<img src="http://placehold.it/370x250" alt="image description" class="img-fluid w-100">
+									<img src="{{ blog.image.url }}" alt="image description" class="img-fluid w-100">
 									<time class="time text-uppercase position-absolute py-2 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block">20</strong> Sep</time>
 								</a>
 							</div>
-							<span class="postBy d-block mb-3">Post by: <a href="{% static 'blog-detail.html' %}">Jane doe</a></span>
-							<h2 class="headingV fwEbold mb-2"><a href="{% static 'blog-detail.html' %}">Aptent taciti soci litora cianpen</a></h2>
-							<p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...</p>
+							<span class="postBy d-block mb-3">Post by: <a href="{% static 'blog-detail.html' %}">{{ blog.name }}</a></span>
+							<h2 class="headingV fwEbold mb-2"><a href="{% static 'blog-detail.html' %}">{{ blog.heading }}</a></h2>
+							<p class="mb-0">{{ blog.desc }}</p>
+
 						</div>
+
 					</div>
-					<div class="col-12 col-sm-6 col-lg-4">
-						<!-- newsPostColumn -->
-						<div class="newsPostColumn text-center px-2 pb-6 mb-6">
-							<div class="imgHolder position-relative mb-6">
-								<a href="blog-detail.html">
-									<img src="http://placehold.it/370x250" alt="image description" class="img-fluid w-100">
-									<time class="time text-uppercase position-absolute py-2 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block">18</strong> Sep</time>
-								</a>
-							</div>
-							<span class="postBy d-block mb-3">Post by: <a href="{% static 'blog-detail.html' %} ">Jane doe</a></span>
-							<h2 class="headingV fwEbold mb-2"><a href="{% static 'blog-detail.html' %}">Aptent taciti soci litora cianpen</a></h2>
-							<p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...</p>
-						</div>
-					</div>
-					<div class="col-12 col-sm-6 col-lg-4">
-						<!-- newsPostColumn -->
-						<div class="newsPostColumn text-center px-2 pb-6 mb-6">
-							<div class="imgHolder position-relative mb-6">
-								<a href="{% static 'blog-detail.html' %}">
-									<img src="http://placehold.it/370x250" alt="image description" class="img-fluid w-100">
-									<time class="time text-uppercase position-absolute py-2 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block">21</strong> Sep</time>
-								</a>
-							</div>
-							<span class="postBy d-block mb-3">Post by: <a href="blog-detail.html">Jane doe</a></span>
-							<h2 class="headingV fwEbold mb-2"><a href="blog-detail.html">Aptent taciti soci litora cianpen</a></h2>
-							<p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...</p>
-						</div>
-					</div>
+					{% endfor %}
 				</div>
 			</section>
 		</main>
+
+
 			{% endblock %}

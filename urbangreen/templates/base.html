@@ -94,7 +94,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav mx-auto text-uppercase d-inline-block">
+                                <ul class="navbar-nav mx-auto text-uppercase d-flex">
 
                                     <li class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
                                         class="nav-item">
@@ -113,8 +113,8 @@
                                     </li>
                                     <li class="nav-item ml-0"><a class="nav-link icon-search" href="javascript:void(0);"></a></li>
                                 </ul>
-                            </div>
-                        </nav><br>
+
+
                         <!-- div class="col-sm-3 col-lg-2">
 						 wishListII-->
 						<!--<ul class="nav nav-tabs wishListII pt-5 justify-content-end border-bottom-0">
@@ -124,38 +124,73 @@
 						</ul>
 					</div>-->
 
-                    </div>
-                        <div class="row justify-content-center">
-			<nav class="navbar navbar-expand-lg navbar-light p-0 pageNav2 position-static" >
+
+<!--                        <div class="row justify-content-center">-->
+<!--			<nav class="navbar navbar-expand-lg navbar-light p-0 pageNav2 position-static" >-->
 								<!-- <button type="button" class="navbar-toggle collapsed position-relative" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false">
 									<span class="sr-only">Toggle navigation</span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>-->
-								<div class="collapse navbar-collapse text-center" id="navbarNav">
-<!--					<button class="button" onclick="window.location.href='{% url 'potting_soil' %}'"><img src="{% static 'cat_icon/potting_soil.png' %}" width="20px" height="20px" style="margin-right:10px;">Potting soil</button>-->
-<!--					<button class="button button2" onclick="window.location.href='{% url 'plant_health' %}'"><img src="{% static 'cat_icon/planthealth.png' %}" width="20px" height="20px" style="margin-right:10px;">Plant health</button>-->
-<!--					<button class="button button3" onclick="window.location.href='{% url 'seeds' %}'"><img src="{% static 'cat_icon/seed1.png' %}" width="20px" height="20px" style="margin-right:10px;">Seeds</button>-->
-<!--					<button class="button button4" onclick="window.location.href='{% url 'accessories' %}'"><img src="{% static 'cat_icon/accessories.png' %}" width="20px" height="20px" style="margin-right:10px;">Accessories</button>-->
-<!--					<button class="button button5" onclick="window.location.href='{% url 'services' %}'"><img src="{% static 'cat_icon/services.png' %}" width="20px" height="20px" style="margin-right:10px;">Services</button>-->
-				<button class="button" onclick="window.location.href='{% url 'potting_soil' %}'">
-                    <img src="{% static 'web_icons/potting1.png' %}" height="35px" onMouseOver="this.src='{% static 'web_icons/potting2.png' %}'" onMouseOut="this.src='{% static 'web_icons/potting1.png' %}' " > </button>
-				<button class="button" onclick="window.location.href='{% url 'plant_health' %}'">
-                    <img src="{% static 'web_icons/planthealth1.png' %}" height="35px" onMouseOver="this.src='{% static 'web_icons/planthealth2.png' %}' " onMouseOut="this.src='{% static 'web_icons/planthealth1.png'%}' "> </button>
-				<button class="button" onclick="window.location.href='{% url 'seeds' %}'">
-                    <img src="{% static 'web_icons/seeds1.png' %}" height="35px" onMouseOver="this.src='{% static 'web_icons/seeds2.png' %}' " onMouseOut="this.src='{% static 'web_icons/seeds1.png'%}' "> </button>
-				<button class="button" onclick="window.location.href='{% url 'accessories' %}'">
-                    <img src="{% static 'web_icons/accessories1.png' %}" height="35px" onMouseOver="this.src='{% static 'web_icons/accessories2.png' %}' " onMouseOut="this.src='{% static 'web_icons/accessories1.png' %}' ">  </button>
-				<button class="button" onclick="window.location.href='{% url 'services' %}'">
-                    <img src="{% static 'web_icons/services1.png' %}" height="35px" onMouseOver="this.src='{% static 'web_icons/services2.png' %}' " onMouseOut="this.src='{% static 'web_icons/services1.png' %}' "> </button>
+                <div class="d-block d-lg-none justify-content-between text-center ">
+                    <!--					<button class="button" onclick="window.location.href='{% url 'potting_soil' %}'"><img src="{% static 'cat_icon/potting_soil.png' %}" width="20px" height="20px" style="margin-right:10px;">Potting soil</button>-->
+                    <!--					<button class="button button2" onclick="window.location.href='{% url 'plant_health' %}'"><img src="{% static 'cat_icon/planthealth.png' %}" width="20px" height="20px" style="margin-right:10px;">Plant health</button>-->
+                    <!--					<button class="button button3" onclick="window.location.href='{% url 'seeds' %}'"><img src="{% static 'cat_icon/seed1.png' %}" width="20px" height="20px" style="margin-right:10px;">Seeds</button>-->
+                    <!--					<button class="button button4" onclick="window.location.href='{% url 'accessories' %}'"><img src="{% static 'cat_icon/accessories.png' %}" width="20px" height="20px" style="margin-right:10px;">Accessories</button>-->
+                    <!--					<button class="button button5" onclick="window.location.href='{% url 'services' %}'"><img src="{% static 'cat_icon/services.png' %}" width="20px" height="20px" style="margin-right:10px;">Services</button>-->
+                    <button class="button" onclick="window.location.href='{% url 'potting_soil' %}'">
+                        <img src="{% static 'web_icons/potting1.png' %}" height="35px"
+                             onMouseOver="this.src='{% static 'web_icons/potting2.png' %}'"
+                             onMouseOut="this.src='{% static 'web_icons/potting1.png' %}' "></button>
+                    <button class="button" onclick="window.location.href='{% url 'plant_health' %}'">
+                        <img src="{% static 'web_icons/planthealth1.png' %}" height="35px"
+                             onMouseOver="this.src='{% static 'web_icons/planthealth2.png' %}' "
+                             onMouseOut="this.src='{% static 'web_icons/planthealth1.png'%}' "></button>
+                    <button class="button" onclick="window.location.href='{% url 'seeds' %}'">
+                        <img src="{% static 'web_icons/seeds1.png' %}" height="35px"
+                             onMouseOver="this.src='{% static 'web_icons/seeds2.png' %}' "
+                             onMouseOut="this.src='{% static 'web_icons/seeds1.png'%}' "></button>
+                    <button class="button" onclick="window.location.href='{% url 'accessories' %}'">
+                        <img src="{% static 'web_icons/accessories1.png' %}" height="35px"
+                             onMouseOver="this.src='{% static 'web_icons/accessories2.png' %}' "
+                             onMouseOut="this.src='{% static 'web_icons/accessories1.png' %}' "></button>
+                    <button class="button" onclick="window.location.href='{% url 'services' %}'">
+                        <img src="{% static 'web_icons/services1.png' %}" height="35px"
+                             onMouseOver="this.src='{% static 'web_icons/services2.png' %}' "
+                             onMouseOut="this.src='{% static 'web_icons/services1.png' %}' "></button>
 
-               </div>
-            </nav>
-        </div>
-      </div>
+                </div>
+                            </div>
+            </nav><br>
+
+                            <div class=" d-none d-lg-flex  justify-content-between ">
+                                <button class="button" onclick="window.location.href='{% url 'potting_soil' %}' "><img
+                                        src="{% static 'web_icons/potting1.png' %}" height="40px"
+                                        onMouseOver="this.src='{% static 'web_icons/potting2.png' %}'"
+                                        onMouseOut="this.src='{% static 'web_icons/potting1.png' %}'"></button>
+                                <button class="button" onclick="window.location.href='{% url 'plant_health' %}'"><img
+                                        src="{% static 'web_icons/planthealth1.png' %}" height="40px"
+                                        onMouseOver="this.src='{% static 'web_icons/planthealth2.png'%}'"
+                                        onMouseOut="this.src='{% static 'web_icons/planthealth1.png'%}'"></button>
+                                <button class="button" onclick="window.location.href='{% url 'seeds' %}'"><img
+                                        src="{% static 'web_icons/seeds1.png' %}" height="40px"
+                                        onMouseOver="this.src='{% static 'web_icons/seeds2.png'%}'"
+                                        onMouseOut="this.src='{% static 'web_icons/seeds1.png'%}'"></button>
+                                <button class="button" onclick="window.location.href='{% url 'accessories' %}'"><img
+                                        src="{% static 'web_icons/accessories1.png' %}" height="40px"
+                                        onMouseOver="this.src='{% static 'web_icons/accessories2.png' %}'"
+                                        onMouseOut="this.src='{% static 'web_icons/accessories1.png' %}'"></button>
+                                <button class="button" onclick="window.location.href='{% url 'services' %}'"><img
+                                        src="{% static 'web_icons/services1.png' %}" height="40px"
+                                        onMouseOver="this.src='{% static 'web_icons/services2.png' %}'"
+                                        onMouseOut="this.src='{% static 'web_icons/services1.png' %}'"></button>
+                            </div>
+                        </div>
+                </div>
             </div>
-        </div></header>
+        </div>
+    </header>
 
 
     <br><br><br><br><br>
@@ -178,6 +213,8 @@
                     </div>
                 <div class="modal-body  mt-4 text-center">
                     <form action="" method="post">
+                        {% csrf_token %}
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="input-icons">
@@ -197,14 +234,14 @@
                         </div>
 <!--                        <a href="#" class="btn btnTheme btnShop fwEbold text-white md-round py-3 px-4">Log in </a>-->
                         <button type="submit" class="button"  style="background-color: #5ba515; color:white; margin: auto; text-height:20px; padding-left:10px; padding-right:10px; " >Log-in</button>
+
                     </form><br>
-                    <p>New user? Please <a href=" "  data-toggle="modal" data-target="#user-register">Register Now</a></p>
+                    <p>New user? Please <a href="" data-toggle="modal" data-target="#user-register">Register Now</a></p>
                 </div>
             </div>
         </div>
     </div>
-
-<div class="modal fade" id="user-register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
+    <div class="modal fade" id="user-register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
          aria-hidden="true">
 
         <div class="modal-dialog modal-dialog-centered " role="document" style="width: 450px; height: 450px;">
@@ -223,11 +260,13 @@
 <!--                    </div>-->
                 <div class="modal-body  mt-4 text-center">
                     <form action="" method="post">
+                        {% csrf_token %}
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="input-icons">
 
-                                    <input class="input-field" id="form-name" width="100%" type="text" name="name" placeholder="Username *"
+                                    <input class="input-field" id="username" width="100%" type="text" name="name" placeholder="Username *"
                                            required >
                                 </div>
                             </div>
@@ -235,43 +274,53 @@
                              <div class="col-md-12">
                                 <div class="input-icons">
 
-                                    <input class="input-field" id="form-email" type="text" name="email"
+                                    <input class="input-field" id="email" type="text" name="email"
                                            placeholder="Email *" required>
                                 </div>
                             </div>
+<!--                            <div class="col-md-12">-->
+<!--                                <div class="input-icons">-->
+
+<!--                                    <input class="input-field" id="first_name" type="text" name="firstname"-->
+<!--                                           placeholder="First Name *" required>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-12">-->
+<!--                                <div class="input-icons">-->
+
+<!--                                    <input class="input-field" id="last_name" type="text" name="lastname"-->
+<!--                                           placeholder="Last Name *" required>-->
+<!--                                </div>-->
+<!--                            </div>-->
                             <div class="col-md-12">
                                 <div class="input-icons">
 
-                                    <input class="input-field" id="form-firstname" type="text" name="firstname"
-                                           placeholder="First Name *" required>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="input-icons">
-
-                                    <input class="input-field" id="form-lastname" type="text" name="lastname"
-                                           placeholder="Last Name *" required>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="input-icons">
-
-                                    <input class="input-field" id="form-phone" type="text" name="phone-number"
+                                    <input class="input-field" id="phone_number" type="text" name="phone-number"
                                            placeholder="Phone Number *" required>
                                 </div>
                             </div>
                              <div class="col-md-12">
                                 <div class="input-icons">
 
-                                    <input class="input-field" id="form-apssword" type="text" name="password"
+                                    <input class="input-field" id="password" type="password" name="password"
                                            placeholder="Password *" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="input-icons">
+
+                                    <input class="input-field" id="password2" type="password" name="cpassword"
+                                           placeholder="Confirm Password *" required>
                                 </div>
                             </div>
 
                         </div>
 <!--                        <a href="#" class="btn btnTheme btnShop fwEbold text-white md-round py-3 px-4">Log in </a>-->
                         <button type="submit" class="button"  style="background-color: #5ba515; color:white; margin: auto; text-height:20px; padding-left:10px; padding-right:10px; " >Sign-in</button>
+
                     </form><br>
+
                     <p>Already an user? <a href="#"  data-toggle="modal" data-target="#user-login">Log-in</a></p>
                 </div>
             </div>
@@ -358,8 +407,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 copyRightHolder v-II text-center pt-md-3 pb-md-4 py-2">
-                    <p class="mb-0">Coppyright 2020 by <a href="javascript:void(0);">Urban Green Store</a> - All right
-                        reserved</p>
+                    <p class="mb-0" style="text-align:left;">Coppyright 2020 by <a href="javascript:void(0);">Urban Green Store</a> - All right
+                        reserved
+                    <span style="float:right;">Powered by <a href="home2.html"><img src="{% static 'images/techraven.png' %}" height="15px" width="80px"> </a> </span> </p>
                 </div>
             </div>
         </div>

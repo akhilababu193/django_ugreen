@@ -3,3 +3,4 @@ from . import models
 # Register your models here.
 admin.site.register(models.ug_new_arrivals)
 admin.site.register(models.ug_best_seller)
+admin.site.register(models.ug_blogs)

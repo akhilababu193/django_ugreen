@@ -16,3 +16,10 @@ class ug_best_seller(models.Model):
     price = models.IntegerField()
     hot = models.BooleanField(default=False)
     sale = models.BooleanField(default=False)
+
+class ug_blogs(models.Model):
+    name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='images')
+    desc = models.TextField()
+    heading = models.TextField()
+

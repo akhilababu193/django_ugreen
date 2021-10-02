@@ -3,11 +3,13 @@ from django.http import HttpResponse
 
 from .models import ug_new_arrivals
 from .models import ug_best_seller
+from .models import ug_blogs
 
 def homepage(request):
     new_prods = ug_new_arrivals.objects.all()
     best_seller = ug_best_seller.objects.all()
-    return render(request, 'home2.html',({'ug_new_arrivals': new_prods, 'ug_best_seller': best_seller}))
+    blog = ug_blogs.objects.all()
+    return render(request, 'home2.html',({'ug_new_arrivals': new_prods, 'ug_best_seller': best_seller, 'ug_blogs': blog}))
 
 
 def blog(request):
@@ -39,7 +41,7 @@ def shop1(request):
 
 
 def user_register(request):
-    return render(request, 'register.html')
+    return render(request, 'base.html')
 
 
 def user_login(request):
